@@ -97,7 +97,7 @@ export const MeshReflectorMaterial = React.forwardRef<MeshReflectorMaterialImpl,
       reflectorWorldPosition.setFromMatrixPosition(parent.matrixWorld)
       cameraWorldPosition.setFromMatrixPosition(camera.matrixWorld)
       rotationMatrix.extractRotation(parent.matrixWorld)
-      normal.set(0, 0, 1)
+      normal.set(0, 1, 0)
       normal.applyMatrix4(rotationMatrix)
       reflectorWorldPosition.addScaledVector(normal, reflectorOffset)
       view.subVectors(reflectorWorldPosition, cameraWorldPosition)
